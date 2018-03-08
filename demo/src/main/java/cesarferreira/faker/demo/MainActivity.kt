@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.widget.ImageView
+import cesarferreira.faker.Faker
 import cesarferreira.faker.loadFromUrl
 import cesarferreira.faker.loadRandomImage
 import kotlinx.android.synthetic.main.activity_main.*
@@ -47,6 +48,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun getFakeItems() = (0..500).map { ItemViewModel(it) }.toList()
+    private fun getFakeItems() = (0..500).map { ItemViewModel(it, Faker.getRandomImage(300, 400)) }.toList()
 
 }

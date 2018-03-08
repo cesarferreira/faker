@@ -40,7 +40,7 @@ fun ImageView.loadRandomImage() {
         loadImage(
                 context = this.context.applicationContext,
                 imageView = this,
-                url = getRandomImage(this.measuredWidth, this.measuredHeight),
+                url = Faker.getRandomImage(this.measuredWidth, this.measuredHeight),
                 placeholder = defaultPlaceholder,
                 error = defaultError
         )
@@ -51,7 +51,7 @@ fun ImageView.loadRandomImage(width: Int, height: Int) =
         loadImage(
                 context = this.context.applicationContext,
                 imageView = this,
-                url = getRandomImage(width, height),
+                url = Faker.getRandomImage(width, height),
                 placeholder = defaultPlaceholder,
                 error = defaultError
         )
@@ -72,6 +72,3 @@ private fun loadImage(context: Context, imageView: ImageView, url: String, place
             .error(error)
             .into(imageView)
 }
-
-private fun valueWithSalt(value: Int) = value + (0..20).random()
-private fun getRandomImage(width: Int, height: Int) = "https://picsum.photos/${valueWithSalt(width)}/${valueWithSalt(height)}"
