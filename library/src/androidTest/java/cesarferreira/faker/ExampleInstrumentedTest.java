@@ -1,4 +1,4 @@
-package cesarferreira.library;
+package cesarferreira.faker;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package cesarferreira.randomimageloader
+package cesarferreira.faker.demo
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -26,6 +26,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun getFakeItems() = (0..50).map { ItemViewModel(it) }.toList()
+    private fun getFakeItems() = (0..500).map { ItemViewModel(it) }.toList()
 
 }

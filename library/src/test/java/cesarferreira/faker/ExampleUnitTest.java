@@ -1,4 +1,4 @@
-package cesarferreira.library;
+package cesarferreira.faker;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package cesarferreira.library
+package cesarferreira.faker
 
 import android.content.Context
 import android.widget.ImageView
