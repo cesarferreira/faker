@@ -37,7 +37,7 @@ Just add the following dependency in your app's `build.gradle`
 allprojects { repositories { maven { url 'https://jitpack.io' } }}
 
 dependencies {
-      implementation 'com.github.cesarferreira:faker:1.0.0'
+      implementation 'com.github.cesarferreira:faker:1.0.1'
 }
 ```
 
