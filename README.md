@@ -46,7 +46,7 @@ dependencies {
 # Examples
 Here are some examples to provide you a head start with using this library.
 
-<div align="center"><img src="extras/carbon.png" /></div>
+<div align="center"><img src="extras/code.png" /></div>
 
 
 
