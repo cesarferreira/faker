@@ -1,6 +1,6 @@
 <div align="center"><img src="extras/ss9.png" /></div>
 
-# <div align="center">Faker</div>
+<h1><div align="center">Faker</div></h1>
 
 <div align="center">A <b>kotlin extension</b> to <b>load images asynchronously</b> on <b>android</b></div><br>
 
