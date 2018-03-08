@@ -21,7 +21,8 @@
 
 # Features
 
-- <b>Load random images into any `ImageView`</b>
+- Load random images asynchronously into any `ImageView`
+- Load any image by passing a simple url into it
 
 # Usage
 Just add the following dependency in your app's `build.gradle`
