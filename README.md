@@ -37,11 +37,9 @@ Just add the following dependency in your app's `build.gradle`
 allprojects { repositories { maven { url 'https://jitpack.io' } }}
 
 dependencies {
-      implementation 'com.github.cesarferreira:faker:1.0.1'
+      implementation 'com.github.cesarferreira:faker:1.0.2'
 }
 ```
-
-<!-- implementation 'com.github.cesarferreira.faker:library:1.0.0' -->
 
 # Examples
 Here are some examples to provide you a head start with using this library.
