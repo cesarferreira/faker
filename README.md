@@ -1,6 +1,8 @@
-<div align="center"><img src="extras/ss3.png"/></div>
+<div align="center"><img src="extras/ss4.png" height="300" /></div>
 
-<div align="center"><b>A kotlin extension to load images asyncronously</b></div><br>
+# <div align="center">Faker</div>
+
+<div align="center">A kotlin extension to load images asyncronously</div><br>
 
 <div align="center">
 	<a href="https://www.android.com">
