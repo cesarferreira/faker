@@ -1,4 +1,4 @@
-<div align="center"><img src="extras/ss4.png" height="300" /></div>
+<div align="center"><img src="extras/ss9.png" /></div>
 
 # <div align="center">Faker</div>
 
@@ -26,7 +26,7 @@
 # Features
 
 - Load random images asynchronously into any `ImageView`
-- Will download a random image that fits perfectly the size of the `imageView`
+- Will download a random image that fits perfectly the size of that `imageView`
 - Load any image by passing a simple url into it
 - Perfect for image placeholders
 
@@ -35,7 +35,7 @@ Just add the following dependency in your app's `build.gradle`
 
 ```groovy
 dependencies {
-      compile 'cesarferreira.faker:library:1.0.0'
+      implementation 'com.github.cesarferreira.faker:library:1.0.0'
 }
 ```
 
