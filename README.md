@@ -2,7 +2,7 @@
 
 # <div align="center">Faker</div>
 
-<div align="center">A kotlin extension to load images asynchronously on android</div><br>
+<div align="center">A <b>kotlin extension</b> to <b>load images asynchronously</b> on <b>android</b></div><br>
 
 <div align="center">
 	<a href="https://www.android.com">
@@ -34,10 +34,19 @@
 Just add the following dependency in your app's `build.gradle`
 
 ```groovy
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
 dependencies {
-      implementation 'com.github.cesarferreira.faker:library:1.0.0'
+      implementation 'com.github.cesarferreira:faker:1.0.0'
 }
 ```
+
+<!-- implementation 'com.github.cesarferreira.faker:library:1.0.0' -->
 
 # Examples
 Here are some examples to provide you a head start with using this library.
