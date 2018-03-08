@@ -2,7 +2,7 @@
 
 # <div align="center">Faker</div>
 
-<div align="center">A kotlin extension to load images asyncronously</div><br>
+<div align="center">A kotlin extension to load images asynchronously</div><br>
 
 <div align="center">
 	<a href="https://www.android.com">
