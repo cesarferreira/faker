@@ -17,6 +17,10 @@
     <img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square"
       alt="License: MIT" />
   </a>
+	<a href="https://jitpack.io/#cesarferreira/faker">
+    <img src="https://jitpack.io/v/cesarferreira/faker.svg"
+      alt="License: MIT" />
+  </a>
 </div><br>
 
 # Features
