@@ -1,6 +1,6 @@
-<div align="center"><img src="extras/ss.png"/></div>
+<div align="center"><img src="extras/ss3.png"/></div>
 
-<div align="center">A kotlin extension to load images asyncronously</div><br>
+<div align="center"><b>A kotlin extension to load images asyncronously</b></div><br>
 
 <div align="center">
 	<a href="https://www.android.com">
@@ -53,4 +53,4 @@ imageView.loadFromUrl("http://sample.com/image.png", R.color.placeholder, R.colo
 
 
 # License
-<b>Long-Shadows</b> is licensed under `MIT license`. View [license](LICENSE.md).
+Licensed under `MIT license`. View [license](LICENSE.md).
