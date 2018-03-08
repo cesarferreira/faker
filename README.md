@@ -1,6 +1,5 @@
-<div align="center"><img src="/screens/cover.png"/></div>
+<div align="center"><img src="extras/ss.png"/></div>
 
-# <div align="center">Long-Shadows</div>
 <div align="center">A kotlin extension to load images asyncronously</div><br>
 
 <div align="center">
