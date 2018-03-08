@@ -35,7 +35,9 @@ Just add the following dependency in your app's `build.gradle`
 
 ```groovy
 allprojects { repositories { maven { url 'https://jitpack.io' } }}
+```
 
+```groovy
 dependencies {
       implementation 'com.github.cesarferreira:faker:1.0.2'
 }
