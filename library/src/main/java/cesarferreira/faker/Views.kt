@@ -18,6 +18,16 @@ fun ImageView.loadFromUrl(url: String, placeholder: Int = defaultPlaceholder, er
                 callback = callback
         )
 
+fun ImageView.loadFromUrl(url: String, placeholder: Drawable, error: Drawable, callback: OnImageLoadListener? = null) =
+        loadImage(
+                context = this.context.applicationContext,
+                imageView = this,
+                url = url,
+                placeholder = placeholder,
+                error = error,
+                callback = callback
+        )
+
 fun ImageView.loadRandomImage(callback: OnImageLoadListener? = null) {
     this.post({
         loadImage(
@@ -41,17 +51,18 @@ fun ImageView.loadRandomImage(width: Int, height: Int, callback: OnImageLoadList
                 callback = callback
         )
 
-fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Int, error: Int, callback: OnImageLoadListener?) =
-        Picasso.with(context)
-                .load(url)
-                .placeholder(placeholder)
-                .error(error)
-                .into(imageView, callback)
-
-private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Drawable, error: Drawable) {
+private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Drawable, error: Drawable, callback: OnImageLoadListener?) {
     Picasso.with(context)
             .load(url)
             .placeholder(placeholder)
             .error(error)
-            .into(imageView)
+            .into(imageView, callback)
+}
+
+private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Int, error: Int, callback: OnImageLoadListener?) {
+    Picasso.with(context)
+            .load(url)
+            .placeholder(placeholder)
+            .error(error)
+            .into(imageView, callback)
 }
