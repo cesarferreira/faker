@@ -8,67 +8,61 @@ import com.squareup.picasso.Picasso
 private val defaultPlaceholder = R.color.defaultPlaceholder
 private val defaultError = R.color.errorPlaceholder
 
-fun ImageView.loadFromUrl(url: String) =
-        loadImage(
-                context = this.context.applicationContext,
-                imageView = this,
-                url = url,
-                placeholder = defaultPlaceholder,
-                error = defaultError
-        )
-
-fun ImageView.loadFromUrl(url: String, placeholder: Int, error: Int) =
+fun ImageView.loadFromUrl(url: String, placeholder: Int = defaultPlaceholder, error: Int = defaultError, callback: OnImageLoadListener? = null) =
         loadImage(
                 context = this.context.applicationContext,
                 imageView = this,
                 url = url,
                 placeholder = placeholder,
-                error = error
+                error = error,
+                callback = callback
         )
 
-fun ImageView.loadFromUrl(url: String, placeholder: Drawable, error: Drawable) =
+fun ImageView.loadFromUrl(url: String, placeholder: Drawable, error: Drawable, callback: OnImageLoadListener? = null) =
         loadImage(
                 context = this.context.applicationContext,
                 imageView = this,
                 url = url,
                 placeholder = placeholder,
-                error = error
+                error = error,
+                callback = callback
         )
 
-fun ImageView.loadRandomImage() {
+fun ImageView.loadRandomImage(callback: OnImageLoadListener? = null) {
     this.post({
         loadImage(
                 context = this.context.applicationContext,
                 imageView = this,
                 url = Faker.getRandomImage(this.measuredWidth, this.measuredHeight),
                 placeholder = defaultPlaceholder,
-                error = defaultError
+                error = defaultError,
+                callback = callback
         )
     })
 }
 
-fun ImageView.loadRandomImage(width: Int, height: Int) =
+fun ImageView.loadRandomImage(width: Int, height: Int, callback: OnImageLoadListener? = null) =
         loadImage(
                 context = this.context.applicationContext,
                 imageView = this,
                 url = Faker.getRandomImage(width, height),
                 placeholder = defaultPlaceholder,
-                error = defaultError
+                error = defaultError,
+                callback = callback
         )
 
-
-private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Int, error: Int) {
+private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Drawable, error: Drawable, callback: OnImageLoadListener?) {
     Picasso.with(context)
             .load(url)
             .placeholder(placeholder)
             .error(error)
-            .into(imageView)
+            .into(imageView, callback)
 }
 
-private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Drawable, error: Drawable) {
+private fun loadImage(context: Context, imageView: ImageView, url: String, placeholder: Int, error: Int, callback: OnImageLoadListener?) {
     Picasso.with(context)
             .load(url)
             .placeholder(placeholder)
             .error(error)
-            .into(imageView)
+            .into(imageView, callback)
 }
