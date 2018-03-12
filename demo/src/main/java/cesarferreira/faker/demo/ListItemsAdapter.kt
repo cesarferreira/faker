@@ -24,16 +24,7 @@ class ListItemsAdapter(private val items: ArrayList<ItemViewModel>) : RecyclerVi
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: ItemViewModel) {
-            itemView.thumbnail.loadFromUrl(url = item.thumbnail,
-                    callback = object : OnImageLoadListener {
-                        override fun onSuccess() {
-                            Log.d("Tag", "yey")
-                        }
-
-                        override fun onError() {
-
-                        }
-                    })
+            itemView.thumbnail.loadFromUrl(url = item.thumbnail)
         }
     }
 }
