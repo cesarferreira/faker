@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 //        imageView.loadRandomImage(300, 400)
 //
 //        // load the image url with this placeholder and error
-//        imageView.loadFromUrl("http://example.com/image01.png", R.color.defaultPlaceholder, R.color.errorPlaceholder)
+//        imageView.loadFromUrl("http://example.com/image01.png", R.color.DEFAULT_PLACEHOLDER, R.color.errorPlaceholder)
 //
 //        // load the image url with this placeholder and error
 //        imageView.loadFromUrl("http://example.com/image01.png", R.drawable.placeholder, R.drawable.error)

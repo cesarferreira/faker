@@ -26,9 +26,9 @@
 # Features
 
 - Load random images asynchronously into any `ImageView`
-- Will download a random image that fits perfectly the size of that `imageView`
+- Load a random image that fits perfectly the size of that `imageView`
 - Load any image by passing a simple url into it
-- Perfect for image placeholders
+- Perfect for image placeholders to jump start a project
 
 # Install
 Just add the following dependency in your app's `build.gradle`

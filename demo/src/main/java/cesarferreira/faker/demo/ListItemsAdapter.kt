@@ -1,11 +1,12 @@
 package cesarferreira.faker.demo
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import cesarferreira.faker.OnImageLoadListener
 import cesarferreira.faker.loadFromUrl
-import cesarferreira.faker.loadRandomImage
 import kotlinx.android.synthetic.main.item_list_item.view.*
 
 class ListItemsAdapter(private val items: ArrayList<ItemViewModel>) : RecyclerView.Adapter<ListItemsAdapter.ItemViewHolder>() {
@@ -23,7 +24,16 @@ class ListItemsAdapter(private val items: ArrayList<ItemViewModel>) : RecyclerVi
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: ItemViewModel) {
-            itemView.thumbnail.loadFromUrl(item.thumbnail)
+            itemView.thumbnail.loadFromUrl(url = item.thumbnail,
+                    callback = object : OnImageLoadListener {
+                        override fun onSuccess() {
+                            Log.d("Tag", "yey")
+                        }
+
+                        override fun onError() {
+
+                        }
+                    })
         }
     }
 }

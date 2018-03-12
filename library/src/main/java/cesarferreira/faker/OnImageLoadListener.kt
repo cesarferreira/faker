@@ -1,5 +1,7 @@
 package cesarferreira.faker
 
-import com.squareup.picasso.Callback
 
-interface OnImageLoadListener : Callback
+interface OnImageLoadListener {
+    fun onSuccess()
+    fun onError()
+}
