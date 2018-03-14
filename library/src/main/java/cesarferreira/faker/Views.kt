@@ -1,10 +1,10 @@
 package cesarferreira.faker
 
-import android.content.Context
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
+import java.lang.Exception
 
 private val DEFAULT_PLACEHOLDER = R.color.defaultPlaceholder
 private val DEFAULT_ERROR = R.color.errorPlaceholder
@@ -21,7 +21,6 @@ fun ImageView.loadFromUrl(url: String,
                           error: Int = DEFAULT_ERROR,
                           callback: OnImageLoadListener = DEFAULT_CALLBACK) =
         loadImage(
-                context = this.context.applicationContext,
                 imageView = this,
                 url = url,
                 placeholder = placeholder,
@@ -34,7 +33,6 @@ fun ImageView.loadFromUrl(url: String,
                           error: Drawable, callback:
                           OnImageLoadListener = DEFAULT_CALLBACK) =
         loadImage(
-                context = this.context.applicationContext,
                 imageView = this,
                 url = url,
                 placeholder = placeholder,
@@ -45,7 +43,6 @@ fun ImageView.loadFromUrl(url: String,
 fun ImageView.loadRandomImage(callback: OnImageLoadListener = DEFAULT_CALLBACK) {
     this.post({
         loadImage(
-                context = this.context.applicationContext,
                 imageView = this,
                 url = Faker.getRandomImage(this.measuredWidth, this.measuredHeight),
                 placeholder = DEFAULT_PLACEHOLDER,
@@ -59,7 +56,6 @@ fun ImageView.loadRandomImage(width: Int,
                               height: Int,
                               callback: OnImageLoadListener = DEFAULT_CALLBACK) =
         loadImage(
-                context = this.context.applicationContext,
                 imageView = this,
                 url = Faker.getRandomImage(width, height),
                 placeholder = DEFAULT_PLACEHOLDER,
@@ -67,34 +63,32 @@ fun ImageView.loadRandomImage(width: Int,
                 callback = callback
         )
 
-private fun loadImage(context: Context,
-                      imageView: ImageView,
+private fun loadImage(imageView: ImageView,
                       url: String,
                       placeholder: Drawable,
                       error: Drawable,
                       callback: OnImageLoadListener) {
-    Picasso.with(context)
+    Picasso.get()
             .load(url)
             .placeholder(placeholder)
             .error(error)
             .into(imageView, object : Callback {
-                override fun onSuccess() {
-                    callback.onSuccess()
+                override fun onError(e: Exception?) {
+                    callback.onError()
                 }
 
-                override fun onError() {
-                    callback.onError()
+                override fun onSuccess() {
+                    callback.onSuccess()
                 }
             })
 }
 
-private fun loadImage(context: Context,
-                      imageView: ImageView,
+private fun loadImage(imageView: ImageView,
                       url: String,
                       placeholder: Int,
                       error: Int,
                       callback: OnImageLoadListener) {
-    Picasso.with(context)
+    Picasso.get()
             .load(url)
             .placeholder(placeholder)
             .error(error)
@@ -103,7 +97,7 @@ private fun loadImage(context: Context,
                     callback.onSuccess()
                 }
 
-                override fun onError() {
+                override fun onError(e: Exception?) {
                     callback.onError()
                 }
             })
