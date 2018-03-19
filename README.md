@@ -39,7 +39,7 @@ allprojects { repositories { maven { url 'https://jitpack.io' } }}
 
 ```groovy
 dependencies {
-      implementation 'com.github.cesarferreira:faker:1.0.2'
+      implementation 'com.github.cesarferreira:faker:1.1.1'
 }
 ```
 
