@@ -1,12 +1,10 @@
 package cesarferreira.faker.demo
 
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import cesarferreira.faker.OnImageLoadListener
 import cesarferreira.faker.loadFromUrl
 import kotlinx.android.synthetic.main.item_list_item.view.*
 

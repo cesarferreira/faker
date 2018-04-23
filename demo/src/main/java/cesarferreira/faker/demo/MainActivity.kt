@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-
     private fun getFakeItems() = (0..500).map { ItemViewModel(it, Faker.getRandomImage(300, 400)) }.toList()
 
 }
