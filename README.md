@@ -9,14 +9,7 @@
     <img src="https://img.shields.io/badge/platform-Android-brightgreen.svg?style=flat-square"
       alt="Platform" />
   </a>
-	<a href="https://android-arsenal.com/api?level=16">
-    <img src="https://img.shields.io/badge/API-16%2B-blue.svg?style=flat-square"
-      alt="API" />
-  </a>
-	<a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square"
-      alt="License: MIT" />
-  </a>
+
 	<a href="https://jitpack.io/#cesarferreira/faker">
     <img src="https://jitpack.io/v/cesarferreira/faker.svg"
       alt="License: MIT" />
