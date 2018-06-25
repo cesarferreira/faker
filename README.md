@@ -1,27 +1,15 @@
-<div align="center"><img src="extras/ss9.png" /></div>
+<p align="center"><img src="extras/ss9.png" /></p>
 
-<h1><div align="center">Faker</div></h1>
+<h1 align="center">Faker</h1>
 
-<div align="center">A <b>kotlin extension</b> to <b>load images asynchronously</b> on <b>android</b></div><br>
+<p align="center">A <b>kotlin extension</b> to <b>load images asynchronously</b> on <b>android</b></p>
 
-<div align="center">
-	<a href="https://www.android.com">
-    <img src="https://img.shields.io/badge/platform-Android-brightgreen.svg?style=flat-square"
-      alt="Platform" />
-  </a>
-	<a href="https://android-arsenal.com/api?level=16">
-    <img src="https://img.shields.io/badge/API-16%2B-blue.svg?style=flat-square"
-      alt="API" />
-  </a>
-	<a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square"
-      alt="License: MIT" />
-  </a>
-	<a href="https://jitpack.io/#cesarferreira/faker">
-    <img src="https://jitpack.io/v/cesarferreira/faker.svg"
-      alt="License: MIT" />
-  </a>
-</div><br>
+<p align="center">
+	<a href="https://www.android.com"><img src="https://img.shields.io/badge/platform-Android-brightgreen.svg?style=flat-square" alt="Platform" /></a>
+	<a href="https://android-arsenal.com/api?level=16"><img src="https://img.shields.io/badge/API-16%2B-blue.svg?style=flat-square" alt="API" /></a>
+	<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-red.svg?style=flat-square" alt="License: MIT" /></a>
+	<a href="https://jitpack.io/#cesarferreira/faker"><img src="https://jitpack.io/v/cesarferreira/faker.svg" alt="License: MIT" /></a>
+</p>
 
 # Features
 
@@ -42,6 +30,10 @@ dependencies {
       implementation 'com.github.cesarferreira:faker:1.2.0'
 }
 ```
+
+or use [drone](https://github.com/cesarferreira/drone):
+
+> drone add faker app-module
 
 # Examples
 Here are some examples to provide you a head start with using this library.
