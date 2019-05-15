@@ -40,13 +40,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
         adapter = ListItemsAdapter(getFakeItems() as ArrayList<ItemViewModel>)
 
         recyclerView.adapter = adapter
     }
 
-    private fun getFakeItems() = (0..500).map { ItemViewModel(it, Faker.getRandomImage(300, 400)) }.toList()
+    private fun getFakeItems() = (0..500).map { ItemViewModel(it, Faker.getRandomImage(400, 300)) }.toList()
 
 }
