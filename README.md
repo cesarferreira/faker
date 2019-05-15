@@ -27,7 +27,7 @@ allprojects { repositories { maven { url 'https://jitpack.io' } }}
 
 ```groovy
 dependencies {
-      implementation 'com.github.cesarferreira:faker:1.2.1'
+      implementation 'com.github.cesarferreira:faker:x.x.x'
 }
 ```
 
