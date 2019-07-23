@@ -3,10 +3,7 @@ package cesarferreira.faker.demo
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.StaggeredGridLayoutManager
-import android.widget.ImageView
 import cesarferreira.faker.Faker
-import cesarferreira.faker.loadFromUrl
-import cesarferreira.faker.loadRandomImage
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 //
 //        // load the image url with this placeholder and error
 //        imageView.loadFromUrl("http://example.com/image01.png", R.drawable.placeholder, R.drawable.error)
-
     }
 
     private fun setupRecyclerView() {
@@ -48,5 +44,4 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getFakeItems() = (0..500).map { ItemViewModel(it, Faker.getRandomImage(400, 300)) }.toList()
-
 }

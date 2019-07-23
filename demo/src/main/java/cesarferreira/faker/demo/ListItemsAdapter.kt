@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import cesarferreira.faker.loadFromUrl
-import kotlinx.android.synthetic.main.item_list_item.view.*
+import kotlinx.android.synthetic.main.item_list_item.view.thumbnail
 
-class ListItemsAdapter(private val items: ArrayList<ItemViewModel>) : RecyclerView.Adapter<ListItemsAdapter.ItemViewHolder>() {
+class ListItemsAdapter(private val items: ArrayList<ItemViewModel>) :
+    RecyclerView.Adapter<ListItemsAdapter.ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_list_item, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_list_item, parent, false)
         return ItemViewHolder(itemView)
     }
 
@@ -23,8 +25,14 @@ class ListItemsAdapter(private val items: ArrayList<ItemViewModel>) : RecyclerVi
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: ItemViewModel) {
-            itemView.thumbnail.loadFromUrl(url = item.thumbnail)
-            itemView.setOnClickListener { Toast.makeText(itemView.context, item.toString(), Toast.LENGTH_SHORT).show() }
+            itemView.thumbnail.loadFromUrl(url = item.thumbnail, onLoadingCompleted = {})
+            itemView.setOnClickListener {
+                Toast.makeText(
+                    itemView.context,
+                    item.toString(),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 }
