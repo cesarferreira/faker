@@ -2,6 +2,7 @@ package cesarferreira.faker
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
@@ -73,7 +74,7 @@ private fun loadImage(
     onLoadingCompleted: () -> (Unit)
 ) {
 
-    GlideApp.with(imageView.context)
+    Glide.with(imageView.context)
         .load(url)
         .placeholder(placeholder)
         .addListener(requestListener(onLoadingCompleted))
@@ -114,7 +115,7 @@ private fun loadImage(
     onLoadingCompleted: () -> (Unit)
 ) {
 
-    GlideApp.with(imageView.context)
+    Glide.with(imageView.context)
         .load(url)
         .placeholder(placeholder)
         .error(error)

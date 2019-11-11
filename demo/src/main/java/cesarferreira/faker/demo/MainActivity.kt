@@ -1,8 +1,8 @@
 package cesarferreira.faker.demo
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.StaggeredGridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import cesarferreira.faker.Faker
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -36,7 +36,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        recyclerView.layoutManager = StaggeredGridLayoutManager(
+            2,
+            StaggeredGridLayoutManager.VERTICAL
+        )
 
         adapter = ListItemsAdapter(getFakeItems() as ArrayList<ItemViewModel>)
 
